@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primer repo</title>
+    <title>VINGOZZE</title>
     <style>
         body {
             margin: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(120deg, #f0f4f8 0%, #c9e7fa 100%);
-            color: #222;
+            background: linear-gradient(120deg, #f8e7d3 0%, #b97a56 100%);
+            color: #3e2723;
         }
         nav {
-            background: #1976d2;
+            background: #6d071a;
             color: #fff;
             padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
         nav .logo {
             font-weight: bold;
-            font-size: 1.3rem;
-            letter-spacing: 1px;
+            font-size: 1.7rem;
+            letter-spacing: 2px;
+            font-family: 'Georgia', serif;
         }
         nav ul {
             list-style: none;
@@ -36,54 +37,216 @@
             color: #fff;
             text-decoration: none;
             font-weight: 500;
+            font-size: 1.1rem;
             transition: color 0.2s;
         }
         nav ul li a:hover {
-            color: #ffeb3b;
+            color: #ffd54f;
+        }
+        .hero {
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;
+            min-height: 340px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-shadow: 0 2px 8px #0008;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0.5em 0 0.2em 0;
+            font-family: 'Georgia', serif;
+            letter-spacing: 3px;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 1.5em;
+        }
+        .hero .btn {
+            background: #ffd54f;
+            color: #6d071a;
+            border: none;
+            padding: 0.8em 2em;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 8px #0002;
+            transition: background 0.2s, color 0.2s;
+        }
+        .hero .btn:hover {
+            background: #6d071a;
+            color: #ffd54f;
         }
         .container {
-            max-width: 700px;
-            margin: 3rem auto;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 24px rgba(25, 118, 210, 0.08);
+            max-width: 900px;
+            margin: 2.5rem auto;
+            background: #fff8f2;
+            border-radius: 14px;
+            box-shadow: 0 4px 24px rgba(109, 7, 26, 0.08);
             padding: 2.5rem 2rem;
         }
-        h1 {
-            color: #1976d2;
-            margin-top: 0;
+        h2 {
+            color: #6d071a;
+            font-family: 'Georgia', serif;
         }
-        .presentacion {
+        .vinos-lista {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .vino-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px #0001;
+            padding: 1.2rem 1rem;
+            width: 220px;
+            text-align: center;
+        }
+        .vino-card img {
+            width: 90px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 0.7em;
+        }
+        .vino-card h3 {
+            margin: 0.5em 0 0.2em 0;
             font-size: 1.2rem;
-            margin-bottom: 1.5rem;
         }
-        @media (max-width: 600px) {
+        .vino-card p {
+            font-size: 0.98rem;
+            color: #6d071a;
+        }
+        .vino-card .btn {
+            margin-top: 0.7em;
+            background: #6d071a;
+            color: #fff;
+            border: none;
+            padding: 0.5em 1.2em;
+            border-radius: 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        .vino-card .btn:hover {
+            background: #ffd54f;
+            color: #6d071a;
+        }
+        .galeria {
+            margin: 2.5rem 0 1.5rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            justify-content: center;
+        }
+        .galeria img {
+            width: 160px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #0002;
+            transition: transform 0.2s;
+        }
+        .galeria img:hover {
+            transform: scale(1.07);
+        }
+        .contacto {
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+        .contacto a {
+            color: #6d071a;
+            text-decoration: underline;
+        }
+        .redes {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .redes a {
+            color: #6d071a;
+            font-size: 2rem;
+            transition: color 0.2s;
+        }
+        .redes a:hover {
+            color: #b97a56;
+        }
+        @media (max-width: 700px) {
             .container {
                 padding: 1.2rem 0.7rem;
             }
-            nav {
+            .vinos-lista {
                 flex-direction: column;
-                gap: 0.5rem;
+                align-items: center;
+            }
+            .galeria {
+                flex-direction: column;
+                align-items: center;
+            }
+            .hero h1 {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
     <nav>
-        <span class="logo">Mi Primer Repo</span>
+        <span class="logo">VINGOZZE</span>
         <ul>
             <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre">Sobre mí</a></li>
+            <li><a href="#vinos">Vinos</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
+    <section class="hero" id="inicio">
+        <h1>VINGOZZE</h1>
+        <p>Descubre la pasión y el arte del vino en cada copa.<br>Vinos seleccionados para los paladares más exigentes.</p>
+        <a href="#vinos" class="btn">Ver nuestros vinos</a>
+    </section>
     <div class="container">
-        <h1 id="inicio">¡Hola GitHub!</h1>
-        <p class="presentacion">Bienvenido a mi primera página web en GitHub. Aquí estoy aprendiendo y experimentando con HTML y CSS para crear sitios modernos y atractivos.</p>
-        <h2 id="sobre">Sobre mí</h2>
-        <p>Soy un entusiasta de la tecnología, aprendiendo desarrollo web y compartiendo mis avances en este repositorio. ¡Cada día es una nueva oportunidad para mejorar!</p>
-        <h2 id="contacto">Contacto</h2>
-        <p>Puedes contactarme a través de mi correo: <a href="mailto:ejemplo@email.com">ejemplo@email.com</a></p>
+        <h2 id="vinos">Nuestros Vinos</h2>
+        <div class="vinos-lista">
+            <div class="vino-card">
+                <img src="https://images.unsplash.com/photo-1514361892635-cebb9b6c7ca5?auto=format&fit=crop&w=400&q=80" alt="Vino Tinto">
+                <h3>Vino Tinto Reserva</h3>
+                <p>Intenso, elegante y con notas a frutos rojos. Perfecto para carnes y quesos.</p>
+                <button class="btn">Comprar</button>
+            </div>
+            <div class="vino-card">
+                <img src="https://images.unsplash.com/photo-1514361892635-cebb9b6c7ca5?auto=format&fit=crop&w=400&q=80" alt="Vino Blanco">
+                <h3>Vino Blanco Premium</h3>
+                <p>Fresco, afrutado y con un toque floral. Ideal para pescados y mariscos.</p>
+                <button class="btn">Comprar</button>
+            </div>
+            <div class="vino-card">
+                <img src="https://images.unsplash.com/photo-1514361892635-cebb9b6c7ca5?auto=format&fit=crop&w=400&q=80" alt="Vino Rosado">
+                <h3>Vino Rosado Dulce</h3>
+                <p>Suave, refrescante y con notas a fresa. Perfecto para postres y tardes de verano.</p>
+                <button class="btn">Comprar</button>
+            </div>
+        </div>
+        <h2>Galería</h2>
+        <div class="galeria">
+            <img src="https://images.unsplash.com/photo-1514361892635-cebb9b6c7ca5?auto=format&fit=crop&w=400&q=80" alt="Botella de vino 1">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Copa de vino 2">
+            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Viñedo 3">
+            <img src="https://images.unsplash.com/photo-1514361892635-cebb9b6c7ca5?auto=format&fit=crop&w=400&q=80" alt="Botella de vino 4">
+        </div>
+        <div class="contacto" id="contacto">
+            <h2>Contacto</h2>
+            <p>¿Tienes dudas o quieres hacer un pedido especial?<br>
+            Escríbenos a <a href="mailto:contacto@vingozze.com">contacto@vingozze.com</a></p>
+            <div class="redes">
+                <a href="https://facebook.com" title="Facebook" target="_blank" rel="noopener">&#x1F426;</a>
+                <a href="https://instagram.com" title="Instagram" target="_blank" rel="noopener">&#x1F33A;</a>
+                <a href="https://twitter.com" title="Twitter" target="_blank" rel="noopener">&#x1F426;</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
