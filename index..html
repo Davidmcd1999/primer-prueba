@@ -1,10 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi primer repo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(120deg, #f0f4f8 0%, #c9e7fa 100%);
+            color: #222;
+        }
+        nav {
+            background: #1976d2;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        nav .logo {
+            font-weight: bold;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 1.5rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav ul li a:hover {
+            color: #ffeb3b;
+        }
+        .container {
+            max-width: 700px;
+            margin: 3rem auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(25, 118, 210, 0.08);
+            padding: 2.5rem 2rem;
+        }
+        h1 {
+            color: #1976d2;
+            margin-top: 0;
+        }
+        .presentacion {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.2rem 0.7rem;
+            }
+            nav {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>¡Hola GitHub!</h1>
-    <p>Este es mi segundo cambio</p>
+    <nav>
+        <span class="logo">Mi Primer Repo</span>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre">Sobre mí</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1 id="inicio">¡Hola GitHub!</h1>
+        <p class="presentacion">Bienvenido a mi primera página web en GitHub. Aquí estoy aprendiendo y experimentando con HTML y CSS para crear sitios modernos y atractivos.</p>
+        <h2 id="sobre">Sobre mí</h2>
+        <p>Soy un entusiasta de la tecnología, aprendiendo desarrollo web y compartiendo mis avances en este repositorio. ¡Cada día es una nueva oportunidad para mejorar!</p>
+        <h2 id="contacto">Contacto</h2>
+        <p>Puedes contactarme a través de mi correo: <a href="mailto:ejemplo@email.com">ejemplo@email.com</a></p>
+    </div>
 </body>
 </html>
